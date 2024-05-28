@@ -1,0 +1,5 @@
+weather_df.groupby(['country','capital']).median()[['avg_temp_c']].sort_values('avg_temp_c', ascending = False).head().plot(kind='barh', color = 'teal', grid = True, figsize = (8,2))
+plt.xlabel('Average Temperature (°C)')
+plt.ylabel('Location')
+plt.title('Top 5 Hottest Cities in the World')
+plt.show()
